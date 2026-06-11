@@ -1,0 +1,147 @@
+product-id: 930
+comment: "TipTalk - Sprachlernspiel Asien"
+welcome: tt_welcome
+media-path: audio/ogg/%s
+gme-lang: GERMAN
+replay: 12159
+stop: 12158
+
+# Die speak-Eintraege sind nur Entwicklungsansagen.
+# Sobald echte .ogg-Dateien unter audio/ogg/ liegen, verwendet tttool diese Dateien.
+language: de
+
+scripts:
+  china_mandarin_01:
+    - P(china_mandarin_01_hallo_wie_geht_es_dir)
+  china_mandarin_02:
+    - P(china_mandarin_02_wie_heisst_du)
+  china_mandarin_03:
+    - P(china_mandarin_03_schoene_augen)
+
+  japan_japanese_01:
+    - P(japan_japanese_01_hallo_wie_geht_es_dir)
+  japan_japanese_02:
+    - P(japan_japanese_02_wie_heisst_du)
+  japan_japanese_03:
+    - P(japan_japanese_03_schoene_augen)
+
+  vietnam_vietnamese_01:
+    - P(vietnam_vietnamese_01_hallo_wie_geht_es_dir)
+  vietnam_vietnamese_02:
+    - P(vietnam_vietnamese_02_wie_heisst_du)
+  vietnam_vietnamese_03:
+    - P(vietnam_vietnamese_03_schoene_augen)
+
+  south_korea_korean_01:
+    - P(south_korea_korean_01_hallo_wie_geht_es_dir)
+  south_korea_korean_02:
+    - P(south_korea_korean_02_wie_heisst_du)
+  south_korea_korean_03:
+    - P(south_korea_korean_03_schoene_augen)
+
+  malaysia_malay_01:
+    - P(malaysia_malay_01_hallo_wie_geht_es_dir)
+  malaysia_malay_02:
+    - P(malaysia_malay_02_wie_heisst_du)
+  malaysia_malay_03:
+    - P(malaysia_malay_03_schoene_augen)
+
+  thailand_thai_01:
+    - P(thailand_thai_01_hallo_wie_geht_es_dir)
+  thailand_thai_02:
+    - P(thailand_thai_02_wie_heisst_du)
+  thailand_thai_03:
+    - P(thailand_thai_03_schoene_augen)
+
+  saudi_arabia_arabic_01:
+    - P(saudi_arabia_arabic_01_hallo_wie_geht_es_dir)
+  saudi_arabia_arabic_02:
+    - P(saudi_arabia_arabic_02_wie_heisst_du)
+  saudi_arabia_arabic_03:
+    - P(saudi_arabia_arabic_03_schoene_augen)
+
+  cambodia_khmer_01:
+    - P(cambodia_khmer_01_hallo_wie_geht_es_dir)
+  cambodia_khmer_02:
+    - P(cambodia_khmer_02_wie_heisst_du)
+  cambodia_khmer_03:
+    - P(cambodia_khmer_03_schoene_augen)
+
+  mongolia_mongolian_01:
+    - P(mongolia_mongolian_01_hallo_wie_geht_es_dir)
+  mongolia_mongolian_02:
+    - P(mongolia_mongolian_02_wie_heisst_du)
+  mongolia_mongolian_03:
+    - P(mongolia_mongolian_03_schoene_augen)
+
+  philippines_tagalog_01:
+    - P(philippines_tagalog_01_hallo_wie_geht_es_dir)
+  philippines_tagalog_02:
+    - P(philippines_tagalog_02_wie_heisst_du)
+  philippines_tagalog_03:
+    - P(philippines_tagalog_03_schoene_augen)
+
+speak:
+  tt_welcome: "Willkommen bei TipTalk. Tippe auf ein Land und einen vorbereiteten Satz."
+  china_mandarin_01_hallo_wie_geht_es_dir: "China, Mandarin. Hallo, wie geht es dir?"
+  china_mandarin_02_wie_heisst_du: "China, Mandarin. Wie heisst du?"
+  china_mandarin_03_schoene_augen: "China, Mandarin. Du hast schoene Augen."
+  japan_japanese_01_hallo_wie_geht_es_dir: "Japan, Japanisch. Hallo, wie geht es dir?"
+  japan_japanese_02_wie_heisst_du: "Japan, Japanisch. Wie heisst du?"
+  japan_japanese_03_schoene_augen: "Japan, Japanisch. Du hast schoene Augen."
+  vietnam_vietnamese_01_hallo_wie_geht_es_dir: "Vietnam, Vietnamesisch. Hallo, wie geht es dir?"
+  vietnam_vietnamese_02_wie_heisst_du: "Vietnam, Vietnamesisch. Wie heisst du?"
+  vietnam_vietnamese_03_schoene_augen: "Vietnam, Vietnamesisch. Du hast schoene Augen."
+  south_korea_korean_01_hallo_wie_geht_es_dir: "Suedkorea, Koreanisch. Hallo, wie geht es dir?"
+  south_korea_korean_02_wie_heisst_du: "Suedkorea, Koreanisch. Wie heisst du?"
+  south_korea_korean_03_schoene_augen: "Suedkorea, Koreanisch. Du hast schoene Augen."
+  malaysia_malay_01_hallo_wie_geht_es_dir: "Malaysia, Malaiisch. Hallo, wie geht es dir?"
+  malaysia_malay_02_wie_heisst_du: "Malaysia, Malaiisch. Wie heisst du?"
+  malaysia_malay_03_schoene_augen: "Malaysia, Malaiisch. Du hast schoene Augen."
+  thailand_thai_01_hallo_wie_geht_es_dir: "Thailand, Thailaendisch. Hallo, wie geht es dir?"
+  thailand_thai_02_wie_heisst_du: "Thailand, Thailaendisch. Wie heisst du?"
+  thailand_thai_03_schoene_augen: "Thailand, Thailaendisch. Du hast schoene Augen."
+  saudi_arabia_arabic_01_hallo_wie_geht_es_dir: "Saudi Arabien, Arabisch. Hallo, wie geht es dir?"
+  saudi_arabia_arabic_02_wie_heisst_du: "Saudi Arabien, Arabisch. Wie heisst du?"
+  saudi_arabia_arabic_03_schoene_augen: "Saudi Arabien, Arabisch. Du hast schoene Augen."
+  cambodia_khmer_01_hallo_wie_geht_es_dir: "Kambodscha, Khmer. Hallo, wie geht es dir?"
+  cambodia_khmer_02_wie_heisst_du: "Kambodscha, Khmer. Wie heisst du?"
+  cambodia_khmer_03_schoene_augen: "Kambodscha, Khmer. Du hast schoene Augen."
+  mongolia_mongolian_01_hallo_wie_geht_es_dir: "Mongolei, Mongolisch. Hallo, wie geht es dir?"
+  mongolia_mongolian_02_wie_heisst_du: "Mongolei, Mongolisch. Wie heisst du?"
+  mongolia_mongolian_03_schoene_augen: "Mongolei, Mongolisch. Du hast schoene Augen."
+  philippines_tagalog_01_hallo_wie_geht_es_dir: "Philippinen, Filipino Tagalog. Hallo, wie geht es dir?"
+  philippines_tagalog_02_wie_heisst_du: "Philippinen, Filipino Tagalog. Wie heisst du?"
+  philippines_tagalog_03_schoene_augen: "Philippinen, Filipino Tagalog. Du hast schoene Augen."
+
+scriptcodes:
+  china_mandarin_01: 11001
+  china_mandarin_02: 11002
+  china_mandarin_03: 11003
+  japan_japanese_01: 11004
+  japan_japanese_02: 11005
+  japan_japanese_03: 11006
+  vietnam_vietnamese_01: 11007
+  vietnam_vietnamese_02: 11008
+  vietnam_vietnamese_03: 11009
+  south_korea_korean_01: 11010
+  south_korea_korean_02: 11011
+  south_korea_korean_03: 11012
+  malaysia_malay_01: 11013
+  malaysia_malay_02: 11014
+  malaysia_malay_03: 11015
+  thailand_thai_01: 11016
+  thailand_thai_02: 11017
+  thailand_thai_03: 11018
+  saudi_arabia_arabic_01: 11019
+  saudi_arabia_arabic_02: 11020
+  saudi_arabia_arabic_03: 11021
+  cambodia_khmer_01: 11022
+  cambodia_khmer_02: 11023
+  cambodia_khmer_03: 11024
+  mongolia_mongolian_01: 11025
+  mongolia_mongolian_02: 11026
+  mongolia_mongolian_03: 11027
+  philippines_tagalog_01: 11028
+  philippines_tagalog_02: 11029
+  philippines_tagalog_03: 11030

@@ -1,0 +1,28 @@
+# Build-Ausgaben
+build/**
+!build/
+!build/**/
+!build/**/.gitkeep
+
+# Lokale Tools
+tools/tttool/*
+!tools/tttool/README.md
+tools/tttool/*.exe
+tools/tttool/*.dll
+tools/tttool/**/*.exe
+tools/tttool/**/*.dll
+tools/tttool/**/*.zip
+tools/tttool/_download/
+
+# Von tttool erzeugter TTS-Cache
+tts-cache/
+
+# Windows / Editor
+Thumbs.db
+Desktop.ini
+.DS_Store
+*.tmp
+*.log
+
+# Optional durch tttool erzeugte Dateien
+*.codes.yaml
