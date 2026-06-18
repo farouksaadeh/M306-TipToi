@@ -132,12 +132,12 @@ C:\Users\saade\OneDrive - bbw.ch\03_Berufsschule Donnerstag\6Semester\Modul 306\
 Beispiele fuer erzeugte Dateien:
 
 ```text
-oid-930-START.png
-oid-930-REPLAY.png
-oid-930-STOP.png
-oid-930-china_mandarin_01.png
-oid-930-china_mandarin_02.png
-oid-930-china_mandarin_03.png
+oid-930-930_START_produkt_starten.png
+oid-930-12159_REPLAY_letzte_ausgabe_wiederholen.png
+oid-930-12158_STOP_audio_stoppen.png
+oid-930-11001_china_mandarin_satz-01_hallo_wie_geht_es_dir.png
+oid-930-11002_china_mandarin_satz-02_wie_heisst_du.png
+oid-930-11003_china_mandarin_satz-03_schoene_augen.png
 ```
 
 Insgesamt werden 33 PNG-Dateien erzeugt:
@@ -190,10 +190,10 @@ Fuer das finale Lernblatt werden die PNG-Dateien aus dem OID-Ordner ins Design e
 
 Wichtig:
 
-- `oid-930-START.png` muss auf ein Startfeld im Layout.
-- `oid-930-china_mandarin_01.png` gehoert zum Feld China, Satz 1.
-- `oid-930-china_mandarin_02.png` gehoert zum Feld China, Satz 2.
-- `oid-930-china_mandarin_03.png` gehoert zum Feld China, Satz 3.
+- `oid-930-930_START_produkt_starten.png` muss auf ein Startfeld im Layout.
+- `oid-930-11001_china_mandarin_satz-01_hallo_wie_geht_es_dir.png` gehoert zum Feld China, Satz 1.
+- `oid-930-11002_china_mandarin_satz-02_wie_heisst_du.png` gehoert zum Feld China, Satz 2.
+- `oid-930-11003_china_mandarin_satz-03_schoene_augen.png` gehoert zum Feld China, Satz 3.
 - Die genaue Zuordnung steht in `data/oid_mapping.csv`.
 
 Das Layout-Team soll die PNGs nicht umbenennen, nicht verzerren und nicht drehen.
