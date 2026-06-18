@@ -3,6 +3,7 @@ build/**
 !build/
 !build/**/
 !build/**/.gitkeep
+!build/oid/codes/*.png
 
 # Lokale Tools
 tools/tttool/*
