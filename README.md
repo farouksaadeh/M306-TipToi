@@ -200,12 +200,16 @@ Das Layout-Team soll die PNGs nicht umbenennen, nicht verzerren und nicht drehen
 
 Wichtig fuer den Druck:
 
-- OID-Muster nicht skalieren.
+- OID-Muster nicht skalieren, sondern beim Drucken `100%` oder `Tatsaechliche Groesse` verwenden.
 - OID-Muster nicht drehen.
 - OID-Muster nicht weichzeichnen.
 - Nicht mit zu niedriger Druckqualitaet drucken.
 - Beim Testdruck keine automatische Seitenskalierung verwenden.
 - Der antippbare Bereich muss genug OID-Muster enthalten, damit der Stift ihn erkennt.
+- Wenn moeglich mit 1200 DPI drucken.
+- Bei Druckproblemen verschiedene Qualitaets-, Kontrast- und Schwarz-Weiss-Einstellungen testen.
+- Helle oder weisse Hintergruende funktionieren meist besser als dunkle oder stark strukturierte Bilder.
+- Wenn der Drucker feine Muster schlecht druckt, sind groessere Punkte hilfreich. Das Script nutzt deshalb standardmaessig `--dpi 1200 --pixel-size 3`.
 
 ### Was kommt auf den Stift und was kommt aufs Papier?
 

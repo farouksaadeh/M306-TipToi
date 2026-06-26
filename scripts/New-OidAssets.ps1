@@ -16,7 +16,7 @@ param(
 
     [string] $CodeDim = '30x30',
     [int] $Dpi = 1200,
-    [int] $PixelSize = 2
+    [int] $PixelSize = 3
 )
 
 $ErrorActionPreference = 'Stop'
@@ -80,6 +80,64 @@ New-Item -ItemType Directory -Force -Path $tableDirectory, $codesDirectory | Out
 
 $patternArgs = @('--code-dim', $CodeDim, '--dpi', [string] $Dpi, '--pixel-size', [string] $PixelSize)
 
+function Get-TipTalkDescriptiveOidName {
+    param(
+        [Parameter(Mandatory = $true)]
+        [pscustomobject] $Row
+    )
+
+    if ($Row.role -eq 'start') {
+        return "oid-930-$($Row.oid_code)_START_produkt_starten.png"
+    }
+
+    if ($Row.role -eq 'replay') {
+        return "oid-930-$($Row.oid_code)_REPLAY_letzte_ausgabe_wiederholen.png"
+    }
+
+    if ($Row.role -eq 'stop') {
+        return "oid-930-$($Row.oid_code)_STOP_audio_stoppen.png"
+    }
+
+    if ($Row.role -eq 'sentence') {
+        $sentenceSlug = $Row.audio_id -replace ('^' + [regex]::Escape($Row.oid_field) + '_'), ''
+        $parts = $Row.oid_field -split '_'
+        $sentenceNumber = $parts[-1]
+        $countryLanguage = ($parts[0..($parts.Length - 2)] -join '_')
+        return "oid-930-$($Row.oid_code)_$($countryLanguage)_satz-$($sentenceNumber)_$($sentenceSlug).png"
+    }
+
+    return $null
+}
+
+function Rename-TipTalkOidPngs {
+    param(
+        [Parameter(Mandatory = $true)]
+        [string] $Directory
+    )
+
+    $rows = Read-TipTalkCsv -RelativePath 'data\oid_mapping.csv'
+
+    foreach ($row in $rows) {
+        $oldName = "oid-930-$($row.oid_field).png"
+        $newName = Get-TipTalkDescriptiveOidName -Row $row
+
+        if (-not $newName) {
+            continue
+        }
+
+        $oldPath = Join-Path -Path $Directory -ChildPath $oldName
+        $newPath = Join-Path -Path $Directory -ChildPath $newName
+
+        if (Test-Path -LiteralPath $oldPath -PathType Leaf) {
+            if ((Test-Path -LiteralPath $newPath -PathType Leaf) -and ($oldPath -ne $newPath)) {
+                Remove-Item -LiteralPath $newPath -Force
+            }
+
+            Rename-Item -LiteralPath $oldPath -NewName $newName -Force
+        }
+    }
+}
+
 if ($Mode -in @('Table', 'Both')) {
     $extension = $TableFormat.ToLowerInvariant()
     $tableOutput = Join-Path -Path $tableDirectory -ChildPath ("tiptalk_oid_table.{0}" -f $extension)
@@ -105,6 +163,9 @@ if ($Mode -in @('Codes', 'Both')) {
     $args = @($patternArgs + @('--image-format', $CodesFormat, 'oid-codes', $yamlPath))
 
     Write-TipTalkStatus -Level INFO -Message ("Erzeuge einzelne OID-Codes in: {0}" -f $codesDirectory)
+    Get-ChildItem -LiteralPath $codesDirectory -Filter 'oid-930-*.png' -File -ErrorAction SilentlyContinue |
+        Remove-Item -Force
+
     Push-Location -LiteralPath $codesDirectory
     try {
         & $resolvedTttool @args
@@ -117,6 +178,8 @@ if ($Mode -in @('Codes', 'Both')) {
     if ($exitCode -ne 0) {
         throw ("tttool oid-codes ist fehlgeschlagen. Exit-Code: {0}" -f $exitCode)
     }
+
+    Rename-TipTalkOidPngs -Directory $codesDirectory
     Write-TipTalkStatus -Level OK -Message ("OID-Code-Dateien erstellt in: {0}" -f $codesDirectory)
 }
 
