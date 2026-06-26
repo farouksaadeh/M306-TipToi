@@ -211,6 +211,21 @@ Wichtig fuer den Druck:
 - Helle oder weisse Hintergruende funktionieren meist besser als dunkle oder stark strukturierte Bilder.
 - Wenn der Drucker feine Muster schlecht druckt, sind groessere Punkte hilfreich. Das Script nutzt deshalb standardmaessig `--dpi 1200 --pixel-size 3`.
 
+Fuer einen praktischen Druckvergleich kannst du drei Testseiten erzeugen:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File .\scripts\New-OidTestPages.ps1 -IncludeSvg
+```
+
+Das erzeugt diese Dateien unter `build\oid\testpages`:
+
+- `test-1200-pixel-2.pdf`: sehr fein, fuer gute Drucker.
+- `test-1200-pixel-3.pdf`: empfohlene Standardvariante.
+- `test-600-pixel-4-stark.pdf`: kraeftigere Punkte fuer Drucker, die feine Muster schlecht darstellen.
+- `test-1200-pixel-3-firefox.svg`: SVG-Testdatei fuer Firefox, falls PDF unscharf gedruckt wird.
+
+Drucke die PDFs in Adobe Reader mit `Tatsaechliche Groesse` oder `100%`. Drucke die SVG in Firefox ebenfalls exakt mit `100%`.
+
 ### Was kommt auf den Stift und was kommt aufs Papier?
 
 Auf den Tiptoi-Stift kommt nur die GME-Datei:
